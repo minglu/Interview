@@ -1,0 +1,63 @@
+Collections: ---- List ---ArrayList, LinkedList, Stack, Vector
+			 ---- Set  ---HashSet, Tree Set
+			 ---- Queue	
+Map --HashMap
+Dictionary---Hashtable			 
+
+
+HashMap/HashTable: put, get, remove, size, containsKey, containsValue, isEmpty, clear
+		
+		Map<Integer, String> charHash = new HashMap<Integer, String>();
+		Hashtable charHash = new Hashtable();
+		
+		Traverse:
+		1.
+		for(Integer key : charHash.keySet()) {
+            String value = charHash.get(key);
+        }
+		2.
+		for(Iterator<Integer> it = charHash.keySet().iterator(); it.hasNext();) {
+            Integer key = it.next();
+            String value = charHash.get(key);
+        }
+        3.
+        Set<Map.Entry<Integer, String>> entries = charHash.entrySet();
+        for(Map.Entry<Integer, String> entry : entries) {
+            Integer key = entry.getKey();
+            String value = entry.getValue();
+        }
+        4.
+        Set<Map.Entry<Integer, String>> entries = charHash.entrySet();
+        for(Iterator<Map.Entry<Integer, String>> it = entries.iterator(); it.hasNext();) {
+            Map.Entry<Integer, String> entry = it.next();
+            Integer key = entry.getKey();
+            String value = entry.getValue();
+        }
+        
+List, ArrayList: add, get, remove, size, contains, indexof, isEmpty, clear, toArray
+					ArrayList can grow and shrink dynamically
+
+		ArrayList<String> list = new ArrayList<String>();
+  		Traverse:
+  		1.
+  		for(Object obj : list) {
+        	System.out.println(obj);
+    	}
+ 		2.
+    	for(int i = 0, n = list.size(); i < n; i++) { //worst
+        	System.out.println(data.get(i));
+    	}
+		3. 
+    	for(Iterator it = list.iterator(); it.hasNext();) {
+        	System.out.println(it.next());
+    	}
+
+Array: fixed size. length not length(), 
+	
+	int[] anArray = new int[10]; (also byte[],short[],long[],float[],double[],boolean[],char[],String[])
+	for (int i = 0; i < anArray.length; i++)
+	
+	to List, eg:
+	String[] words = {"ace", "boom", "crew", "dog", "eon"};     
+    List<String> wordList = Arrays.asList(words);  
+    
