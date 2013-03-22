@@ -36,6 +36,7 @@ HashMap/HashTable: put, get, remove, size, containsKey, containsValue, isEmpty, 
         
 List, ArrayList: add, get, remove, size, contains, indexof, isEmpty, clear, toArray
 					ArrayList can grow and shrink dynamically
+LinkedList:  LinkedListNode 
 
 		ArrayList<String> list = new ArrayList<String>();
   		Traverse:
@@ -61,3 +62,23 @@ Array: fixed size. length not length(),
 	String[] words = {"ace", "boom", "crew", "dog", "eon"};     
     List<String> wordList = Arrays.asList(words);  
     
+Stack : push ,pop, empty()
+
+	Stack test = new Stack();
+	test.push(new Integer(1));
+	while(!test.empty()){
+		test.pop();
+	}
+
+Data Growth: A Vector defaults to doubling the size of its array, while the ArrayList increases its array size by 50 percent. 	
+Vectors are synchronized, ArrayList is Not.
+Both the ArrayList and Vector are good for retrieving elements from a specific position in the container or for adding and removing elements from the end of the container. 
+However, adding and removing elements from any other position proves more expensive -- linear to be exact: O(n-i), where n is the number of elements and i is the index of the element added or removed. 
+
+Vector : add/addElement, remove(index), get(index), capacity(), elementAt(index), size(), contains
+		
+		Vector v = new Vector(3, 2);
+		Enumeration vEnum = v.elements(); 
+		while(vEnum.hasMoreElements()){ 
+			System.out.print(vEnum.nextElement() + " "); 
+		} 
