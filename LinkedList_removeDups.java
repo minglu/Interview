@@ -25,7 +25,7 @@ public static void removeDups (LinkedListNode head) {
 		LinkedListNode runner = head;
 		while (runner!= current){
 			if (runner.data == current.data){
-				LinkedListNode temp = current.next;
+				LinkedListNode temp = current.next;//remove current
 				previous.next = temp;
 				current = temp;
 				break;//multi-duplicates were removed
